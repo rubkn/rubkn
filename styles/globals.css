@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+*,
+*::before,
+*::after {
+  @apply m-0 box-border p-0 transition-all;
+}
+
 body {
-  @apply bg-neutral-900 text-neutral-100;
+  @apply m-auto max-w-prose bg-black-500 p-8 font-sans text-white;
 }
