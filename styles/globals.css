@@ -8,6 +8,10 @@
   @apply m-0 box-border p-0 transition-all;
 }
 
+::selection {
+  @apply bg-white text-black-500;
+}
+
 body {
   @apply m-auto max-w-prose bg-black-500 p-8 font-sans text-white;
 }

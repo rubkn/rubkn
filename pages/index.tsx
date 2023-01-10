@@ -1,10 +1,9 @@
-import Header from '@components/Header';
+import Wrapper from '@layouts/Wrapper';
 
 const Home = () => {
   return (
-    <main>
-      <Header />
-      <section className="py-10">
+    <Wrapper>
+      <main className="py-10">
         <div className="text-6xl font-bold tracking-tight">
           Hey, I'm <br />
           Ruben Brandão
@@ -13,8 +12,8 @@ const Home = () => {
           Developer looking to build cool things and work with awesome people.
           Cinema enthusiast, analog photography lover!
         </div>
-      </section>
-    </main>
+      </main>
+    </Wrapper>
   );
 };
 
