@@ -1,7 +1,16 @@
 {
   "name": "rubkn",
+  "description": "An emo personal website built with Next!",
   "version": "0.1.0",
-  "private": true,
+  "author": {
+    "name": "Ruben Brandão",
+    "email": "rubenavbrandao@gmail.com",
+    "url": "https://rubenbrandao.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubkn/rubkn.git"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +19,9 @@
   },
   "dependencies": {
     "@next/font": "13.1.1",
+    "@react-spring/web": "^9.6.1",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.8",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
@@ -26,5 +38,14 @@
     "prettier": "^2.8.2",
     "prettier-plugin-tailwindcss": "^0.2.1",
     "tailwindcss": "^3.2.4"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "bracketSpacing": true
   }
 }
