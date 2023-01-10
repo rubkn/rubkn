@@ -27,13 +27,13 @@ const Header = () => {
     <header>
       <nav className="flex flex-row items-center justify-end space-x-5">
         <span className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-400">
-          <MenuIcon />
+          <SunIcon className="h-6 w-6" />
         </span>
         <span className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-400">
-          <SunIcon />
+          <LanguageIcon className="h-6 w-6" />
         </span>
         <span className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-400">
-          <LanguageIcon />
+          <MenuIcon className="h-6 w-6" />
         </span>
       </nav>
     </header>
