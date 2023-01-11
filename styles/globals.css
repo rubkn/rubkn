@@ -9,9 +9,9 @@
 }
 
 ::selection {
-  @apply bg-white text-black-500 dark:bg-black-500 dark:text-white;
+  @apply bg-black-500 text-black-100 dark:bg-white dark:text-black-500;
 }
 
 body {
-  @apply m-auto max-w-prose p-10 font-sans dark:bg-black-500 dark:text-white;
+  @apply m-auto max-w-prose bg-black-100 p-10 font-sans text-black-500 dark:bg-black-500 dark:text-white;
 }
