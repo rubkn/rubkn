@@ -1,4 +1,11 @@
 {
-  "hello": "Hey, I'm",
-  "name": "Ruben Brandão"
+  "hello": "Hey, I'm\n\nRuben Brandão",
+  "intro": "Developer looking to build cool things and work with awesome people. Cinema enthusiast. Analog photography and car rides lover.",
+  "nav": {
+    "home": "Home",
+    "blog": "Blog",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
 }

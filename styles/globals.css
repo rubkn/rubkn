@@ -13,5 +13,5 @@
 }
 
 body {
-  @apply m-auto max-w-prose bg-black-100 p-10 font-sans text-black-500 dark:bg-black-500 dark:text-white;
+  @apply m-auto max-w-prose bg-black-100 p-8 font-sans text-black-500 dark:bg-black-500 dark:text-white;
 }
