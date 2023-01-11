@@ -1,5 +1,8 @@
 import { type FC, useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
+import { useRouter } from 'next/router';
+import { i18n } from 'next-i18next.config';
+import { useTranslation } from 'next-i18next';
 
 import MenuIcon from '@utils/svg/menu';
 import CloseIcon from '@utils/svg/cross';
@@ -14,11 +17,20 @@ const links = [
 ];
 
 const Header: FC = () => {
+  const router = useRouter();
+  const { pathname, asPath, query } = router;
   const { resolvedTheme, setTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
+  const [language, setLanguage] = useState<'en' | 'pt'>('en');
 
+  const toggleLanguage = () => {
+    setLanguage(language === 'en' ? 'pt' : 'en');
+    router.push({ pathname, query }, asPath, {
+      locale: language
+    });
+  };
   // useEffect only runs on the client, so now we can safely show the UI
   useEffect(() => {
     setMounted(true);
@@ -39,7 +51,10 @@ const Header: FC = () => {
             >
               <CloseIcon className="h-7 w-7" />
             </span>
-            <span className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-400">
+            <span
+              onClick={toggleLanguage}
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-400"
+            >
               <LanguageIcon className="h-6 w-6" />
             </span>
             <span
@@ -83,7 +98,10 @@ const Header: FC = () => {
               </span>
             </section>
             <section className="flex space-x-2">
-              <span className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-400">
+              <span
+                onClick={toggleLanguage}
+                className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-400"
+              >
                 <LanguageIcon className="h-6 w-6" />
               </span>
               <span
