@@ -12,6 +12,7 @@ const FeaturedWork = () => {
         {response.pinnedItems.map((item) => {
           return (
             <PinnedRepo
+              key={item.name}
               url={item.url}
               name={item.name}
               description={item.description}
