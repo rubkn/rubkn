@@ -1,6 +1,9 @@
 {
-  "hello": "Olá, sou o\n\nRuben Brandão",
-  "intro": "Programador à procura de construir coisas fixes com pessoas incríveis. Entusiasta de cinema. Amante de fotografia analógica e viagens de carro.",
+  "intro": {
+    "hello": "Olá, sou o",
+    "name": "Ruben Brandão",
+    "description": "Um programador à procura de criar coisas fixes com pessoas incríveis. Atualmente com uma paixão enorme em desenvolvimento web. Entusiasta de cinema. Amante de fotografia analógica e viagens de carro."
+  },
   "nav": {
     "home": "Início",
     "blog": "Blog",

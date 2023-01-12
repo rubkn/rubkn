@@ -4,10 +4,14 @@ const Hello = () => {
   const { t } = useTranslation('common');
 
   return (
-    <main className="py-12">
-      <div className="text-6xl font-bold tracking-tight">{t('hello')}</div>
-      <div className="py-6 text-lg font-semibold text-black-500 dark:text-black-100">
-        {t('intro')}
+    <main className="py-20 animate-in fade-in">
+      <div className="text-6xl font-bold tracking-tight">
+        {t('intro.hello')}
+        <br />
+        {t('intro.name')}
+      </div>
+      <div className="pt-4 text-base font-medium text-black-500 dark:text-black-100">
+        {t('intro.description')}
       </div>
     </main>
   );
