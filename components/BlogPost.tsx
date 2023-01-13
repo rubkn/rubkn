@@ -2,7 +2,7 @@ import Fork from '@utils/svg/fork';
 import Star from '@utils/svg/star';
 import { type PinnedItem } from '@utils/types';
 
-const PinnedRepo = ({
+const BlogPost = ({
   url,
   name,
   description,
@@ -11,7 +11,7 @@ const PinnedRepo = ({
   languages
 }: PinnedItem) => {
   return (
-    <div className="flex w-full flex-row justify-center">
+    <div className="flex flex-col justify-center py-4">
       <div className="cursor-pointer hover:scale-95 hover:duration-300">
         <div className="flex flex-row items-center justify-between">
           <span className="text-lg font-medium">{name}</span>
@@ -35,4 +35,4 @@ const PinnedRepo = ({
   );
 };
 
-export default PinnedRepo;
+export default BlogPost;

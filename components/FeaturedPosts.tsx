@@ -2,18 +2,19 @@ import { GitHubResponse } from '@utils/types';
 import PinnedRepo from './PinnedRepo';
 
 import response from '@fixtures/github.json';
+import BlogPost from './BlogPost';
 
 /* const FeaturedWork = ({ work }: { work: GitHubResponse }) */
-const FeaturedWork = () => {
+const FeaturedPosts = () => {
   return (
     <main className="animate-in fade-in pb-16">
       <div className="pb-4 text-3xl font-bold tracking-tight">
-        Featured Work
+        Featured Posts
       </div>
-      <div className="flex divide-x divide-black-200 dark:divide-black-400">
+      <div className="divide-y divide-black-200 dark:divide-black-400">
         {response.pinnedItems.map((item) => {
           return (
-            <PinnedRepo
+            <BlogPost
               key={item.name}
               url={item.url}
               name={item.name}
@@ -29,4 +30,4 @@ const FeaturedWork = () => {
   );
 };
 
-export default FeaturedWork;
+export default FeaturedPosts;
