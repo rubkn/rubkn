@@ -62,12 +62,12 @@ const Header: FC = () => {
           </span>
         </div>
         <div className="flex space-x-2">
-          <span
+          {/* <span
             onClick={toggleLanguage}
             className="animate-fade-in flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-200 dark:hover:bg-black-400"
           >
             <LanguageIcon className="h-6 w-6" />
-          </span>
+          </span> */}
           <span
             onClick={() =>
               setTheme(resolvedTheme === 'light' ? 'dark' : 'light')

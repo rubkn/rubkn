@@ -4,7 +4,7 @@ const Hello = () => {
   const { t } = useTranslation('common');
 
   return (
-    <main className="py-20 animate-in fade-in">
+    <main className="animate-in fade-in py-20">
       <div className="text-6xl font-bold tracking-tight">
         {t('intro.hello')}
         <br />
