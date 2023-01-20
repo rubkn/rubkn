@@ -7,7 +7,7 @@
     "email": "rubenavbrandao@gmail.com",
     "url": "https://rubenbrandao.com"
   },
-  "license": "",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rubkn/rubkn.git"
@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@next/font": "13.1.1",
+    "@react-spring/web": "^9.6.1",
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.8",
     "@types/node": "18.11.18",

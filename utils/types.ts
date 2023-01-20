@@ -1,5 +1,3 @@
-export type Language = 'en' | 'pt';
-
 export type GitHubResponse = {
   name: string;
   bio: string | null;

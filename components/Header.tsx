@@ -2,13 +2,12 @@ import { type FC, useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
+import { animated, useSpring } from '@react-spring/web';
 
 import MenuIcon from '@utils/svg/menu';
 import CloseIcon from '@utils/svg/cross';
 import SunIcon from '@utils/svg/sun';
 import MoonIcon from '@utils/svg/moon';
-import LanguageIcon from '@utils/svg/lang';
-import { Language } from '@utils/types';
 import Link from 'next/link';
 
 const Header: FC = () => {
@@ -18,8 +17,19 @@ const Header: FC = () => {
   const { t } = useTranslation('common');
 
   const [mounted, setMounted] = useState(false);
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const [language, setLanguage] = useState<Language>('en');
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const [menuIcon, animateMenu] = useSpring(() => ({
+    from: { opacity: 1, scale: 1 }
+  }));
+
+  const [themeIcon, animateTheme] = useSpring(() => ({
+    from: { opacity: 1, scale: 1 }
+  }));
+
+  const [sliderMenu, animateSlide] = useSpring(() => ({
+    from: { x: -100, opacity: 0 }
+  }));
 
   const links = [
     { to: '/', label: `${t('nav.home')}` },
@@ -28,14 +38,32 @@ const Header: FC = () => {
     { to: '/projects', label: `${t('nav.projects')}` }
   ];
 
-  const toggleLanguage = () => {
-    setLanguage(language === 'en' ? 'pt' : 'en');
-    router.push({ pathname, query }, asPath, {
-      locale: language
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    animateMenu.start({
+      from: { opacity: 0, scale: 0 },
+      to: { opacity: 1, scale: 1 }
+    });
+    animateSlide.start({
+      from: { x: -100, opacity: 0 },
+      to: { x: 0, opacity: 1 }
     });
   };
 
-  // useEffect only runs on the client, so now we can safely show the UI
+  const toggleTheme = () => {
+    setTheme(resolvedTheme === 'light' ? 'dark' : 'light');
+    animateTheme.start({
+      from: {
+        opacity: 0,
+        scale: 0
+      },
+      to: {
+        opacity: 1,
+        scale: 1
+      }
+    });
+  };
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -45,33 +73,23 @@ const Header: FC = () => {
   }
 
   const NavBar: FC = () => {
-    const [effect, setEffect] = useState<boolean>(false);
-
     return (
       <>
-        <div>
-          <span
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-200 dark:hover:bg-black-400"
-          >
-            {menuOpen ? (
-              <CloseIcon className="h-7 w-7" />
-            ) : (
-              <MenuIcon className="h-7 w-7" />
-            )}
-          </span>
-        </div>
+        <animated.span
+          style={menuIcon}
+          onClick={toggleMenu}
+          className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-200 dark:hover:bg-black-400"
+        >
+          {isMenuOpen ? (
+            <CloseIcon className="h-7 w-7" />
+          ) : (
+            <MenuIcon className="h-7 w-7" />
+          )}
+        </animated.span>
         <div className="flex space-x-2">
-          {/* <span
-            onClick={toggleLanguage}
-            className="animate-fade-in flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-200 dark:hover:bg-black-400"
-          >
-            <LanguageIcon className="h-6 w-6" />
-          </span> */}
-          <span
-            onClick={() =>
-              setTheme(resolvedTheme === 'light' ? 'dark' : 'light')
-            }
+          <animated.span
+            style={themeIcon}
+            onClick={toggleTheme}
             className="animate-fade-in flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-200 dark:hover:bg-black-400"
           >
             {resolvedTheme === 'dark' ? (
@@ -79,7 +97,7 @@ const Header: FC = () => {
             ) : (
               <MoonIcon className="h-6 w-6" />
             )}
-          </span>
+          </animated.span>
         </div>
       </>
     );
@@ -92,7 +110,7 @@ const Header: FC = () => {
           <nav className="flex flex-row items-start justify-between">
             <NavBar />
           </nav>
-          <section className="py-8">
+          <animated.section style={sliderMenu} className="py-8">
             {links.map((link) => (
               <div
                 key={link.to}
@@ -103,7 +121,7 @@ const Header: FC = () => {
                 </Link>
               </div>
             ))}
-          </section>
+          </animated.section>
         </section>
       </main>
     );
@@ -116,7 +134,7 @@ const Header: FC = () => {
           <nav className="animate-in fade-in flex flex-row items-center justify-between">
             <NavBar />
           </nav>
-          {menuOpen && <InvisibleMenu />}
+          {isMenuOpen && <InvisibleMenu />}
         </header>
       )}
     </>

@@ -15,7 +15,7 @@ const Home = ({ work }: { work: GitHubResponse }) => {
     <Suspense fallback={null}>
       <Wrapper>
         <Hello />
-        <FeaturedPosts />
+        {/* <FeaturedPosts /> */}
         <FeaturedWork />
       </Wrapper>
     </Suspense>

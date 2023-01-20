@@ -3,14 +3,13 @@ import PinnedRepo from './PinnedRepo';
 
 import response from '@fixtures/github.json';
 
-/* const FeaturedWork = ({ work }: { work: GitHubResponse }) */
 const FeaturedWork = () => {
   return (
-    <main className="animate-in fade-in pb-16">
+    <main className="pb-16">
       <div className="pb-4 text-3xl font-bold tracking-tight">
         Featured Work
       </div>
-      <div className="flex divide-x divide-black-200 dark:divide-black-400">
+      <div className="divide-y divide-black-200 dark:divide-black-400">
         {response.pinnedItems.map((item) => {
           return (
             <PinnedRepo
