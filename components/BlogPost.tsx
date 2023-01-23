@@ -1,6 +1,6 @@
-import Fork from '@utils/svg/fork';
-import Star from '@utils/svg/star';
-import { type PinnedItem } from '@utils/types';
+import Fork from '@svg/fork';
+import Star from '@svg/star';
+import { type PinnedItem } from '@lib/types';
 
 const BlogPost = ({
   url,

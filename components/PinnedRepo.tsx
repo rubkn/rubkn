@@ -1,6 +1,6 @@
-import Fork from '@utils/svg/fork';
-import Star from '@utils/svg/star';
-import { type PinnedItem } from '@utils/types';
+import Fork from '@svg/fork';
+import Star from '@svg/star';
+import { type PinnedItem } from '@lib/types';
 
 const PinnedRepo = ({
   url,
@@ -16,14 +16,18 @@ const PinnedRepo = ({
         <div className="flex flex-row items-center justify-between">
           <span className="text-lg font-medium">{name}</span>
           <div className="flex flex-row space-x-4">
-            <div className="flex flex-row items-center justify-end space-x-1">
-              <span className="text-sm">{stargazerCount}</span>
-              <Star className="h-3 w-3" />
-            </div>
-            <div className="flex flex-row items-center justify-end space-x-1">
-              <span className="text-sm">{forkCount}</span>
-              <Fork className="h-3 w-3" />
-            </div>
+            {stargazerCount >= 0 ? (
+              <div className="flex flex-row items-center justify-end space-x-1">
+                <span className="text-sm">{stargazerCount}</span>
+                <Star className="h-3 w-3" />
+              </div>
+            ) : null}
+            {forkCount > 0 ? (
+              <div className="flex flex-row items-center justify-end space-x-1">
+                <span className="text-sm">{forkCount}</span>
+                <Fork className="h-3 w-3" />
+              </div>
+            ) : null}
           </div>
         </div>
 

@@ -1,4 +1,4 @@
-export type GitHubResponse = {
+export type GitHub = {
   name: string;
   bio: string | null;
   company: string | null;

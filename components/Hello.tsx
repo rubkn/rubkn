@@ -1,17 +1,15 @@
-import { useTranslation } from 'next-i18next';
-
 const Hello = () => {
-  const { t } = useTranslation('common');
-
   return (
     <main className="py-20">
       <div className="text-6xl font-bold tracking-tight">
-        {t('intro.hello')}
+        Hey, I'm
         <br />
-        {t('intro.name')}
+        Ruben Brandão
       </div>
       <div className="pt-4 text-base font-medium text-black-500 dark:text-black-100">
-        {t('intro.description')}
+        A web developer looking to build creative projects and collaborate with
+        inspiring people. Passionate about tech, cinema and analog photography.
+        Love car rides and exploring new places.
       </div>
     </main>
   );

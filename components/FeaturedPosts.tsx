@@ -1,6 +1,3 @@
-import { GitHubResponse } from '@utils/types';
-import PinnedRepo from './PinnedRepo';
-
 import response from '@fixtures/github.json';
 import BlogPost from './BlogPost';
 

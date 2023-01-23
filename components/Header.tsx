@@ -1,20 +1,18 @@
 import { type FC, useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
 import { animated, useSpring } from '@react-spring/web';
 
-import MenuIcon from '@utils/svg/menu';
-import CloseIcon from '@utils/svg/cross';
-import SunIcon from '@utils/svg/sun';
-import MoonIcon from '@utils/svg/moon';
+import MenuIcon from '@svg/menu';
+import CloseIcon from '@svg/cross';
+import SunIcon from '@svg/sun';
+import MoonIcon from '@svg/moon';
 import Link from 'next/link';
 
 const Header: FC = () => {
   const router = useRouter();
   const { pathname, asPath, query } = router;
   const { resolvedTheme, setTheme } = useTheme();
-  const { t } = useTranslation('common');
 
   const [mounted, setMounted] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -32,10 +30,10 @@ const Header: FC = () => {
   }));
 
   const links = [
-    { to: '/', label: `${t('nav.home')}` },
-    { to: '/blog', label: `${t('nav.blog')}` },
-    { to: '/about', label: `${t('nav.about')}` },
-    { to: '/projects', label: `${t('nav.projects')}` }
+    { to: '/', label: 'Home' },
+    { to: '/blog', label: 'Blog' },
+    { to: '/about', label: 'About' },
+    { to: '/work', label: 'Work' }
   ];
 
   const toggleMenu = () => {
@@ -90,7 +88,7 @@ const Header: FC = () => {
           <animated.span
             style={themeIcon}
             onClick={toggleTheme}
-            className="animate-fade-in flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-200 dark:hover:bg-black-400"
+            className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-200 dark:hover:bg-black-400"
           >
             {resolvedTheme === 'dark' ? (
               <SunIcon className="h-6 w-6" />
@@ -105,7 +103,7 @@ const Header: FC = () => {
 
   const InvisibleMenu: FC = () => {
     return (
-      <main className="animate-in fade-in fixed top-0 left-0 z-10 h-full w-full bg-black-100 dark:bg-black-500">
+      <main className="fixed top-0 left-0 z-10 h-full w-full bg-black-100 dark:bg-black-500">
         <section className="m-auto h-full max-w-prose p-8">
           <nav className="flex flex-row items-start justify-between">
             <NavBar />
@@ -131,7 +129,7 @@ const Header: FC = () => {
     <>
       {mounted && (
         <header>
-          <nav className="animate-in fade-in flex flex-row items-center justify-between">
+          <nav className="flex flex-row items-center justify-between">
             <NavBar />
           </nav>
           {isMenuOpen && <InvisibleMenu />}

@@ -16,12 +16,13 @@
     "incremental": true,
     "baseUrl": "./",
     "paths": {
+      "@fixtures/*": ["__fixtures__/*"],
       "@components/*": ["components/*"],
+      "@layouts/*": ["layouts/*"],
+      "@lib/*": ["lib/*"],
       "@pages/*": ["pages/*"],
       "@styles/*": ["styles/*"],
-      "@utils/*": ["utils/*"],
-      "@layouts/*": ["layouts/*"],
-      "@fixtures/*": ["__fixtures__/*"]
+      "@svg/*": ["svg/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
