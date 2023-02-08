@@ -2,13 +2,14 @@ import Star from '@utils/svg/Star';
 import { GitHubPinnedItem } from '@lib/types';
 
 const PinnedRepo = ({
+  url,
   name,
   description,
   stargazerCount,
   languages
 }: GitHubPinnedItem) => {
   return (
-    <div className="flex flex-col justify-center py-4">
+    <a href={url} className="flex flex-col justify-center py-4">
       <div className="cursor-pointer transition-all hover:scale-95 hover:duration-300">
         <div className="flex items-center justify-between">
           <span className="text-lg font-medium">{name}</span>
@@ -41,7 +42,7 @@ const PinnedRepo = ({
           </div>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
