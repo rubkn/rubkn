@@ -12,8 +12,8 @@ const Hello = () => {
         Love car rides and exploring new places.
       </div>
       <div className="pt-4 text-base font-medium text-black-500 dark:text-black-100">
-        Please not that I'm still working on this website. You can check out the
-        staging version at{' '}
+        Please note that I'm still working on this website. You can check out
+        the staging version at{' '}
         <a
           href="https://staging.rubenbrandao.com"
           target="_blank"
