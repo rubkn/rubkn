@@ -11,7 +11,7 @@ export default async function handler(req: NextRequest) {
 
   const data = await response.json();
 
-  return new Response(JSON.stringify({ data }), {
+  return new Response(JSON.stringify(data), {
     status: 200,
     headers: {
       'content-type': 'application/json',

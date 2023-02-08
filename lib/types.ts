@@ -1,14 +1,14 @@
-export type GitHub = {
+export type GitHubResponse = {
   name: string;
   bio: string | null;
   company: string | null;
   twitterUsername: string | null;
   websiteUrl: string | null;
   url: string | null;
-  pinnedItems: PinnedItem[];
+  pinnedItems: GitHubPinnedItem[];
 };
 
-export type PinnedItem = {
+export type GitHubPinnedItem = {
   name: string;
   description: string;
   url: string;

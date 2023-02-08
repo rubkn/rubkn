@@ -105,7 +105,7 @@ const Header: FC = () => {
     return (
       <main className="fixed top-0 left-0 z-10 h-full w-full bg-black-100 dark:bg-black-500">
         <section className="m-auto h-full max-w-prose p-8">
-          <nav className="flex flex-row items-start justify-between">
+          <nav className="flex items-start justify-between">
             <NavBar />
           </nav>
           <animated.section style={sliderMenu} className="py-8">
@@ -129,7 +129,7 @@ const Header: FC = () => {
     <>
       {mounted && (
         <header>
-          <nav className="flex flex-row items-center justify-between">
+          <nav className="flex items-center justify-between">
             <NavBar />
           </nav>
           {isMenuOpen && <InvisibleMenu />}
