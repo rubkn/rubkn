@@ -1,5 +1,5 @@
-import Fork from '@svg/fork';
-import Star from '@svg/star';
+import Fork from '@utils/svg/Fork';
+import Star from '@utils/svg/Star';
 import { type PinnedItem } from '@lib/types';
 
 const PinnedRepo = ({

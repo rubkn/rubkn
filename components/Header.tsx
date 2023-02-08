@@ -3,10 +3,10 @@ import { useTheme } from 'next-themes';
 import { useRouter } from 'next/router';
 import { animated, useSpring } from '@react-spring/web';
 
-import MenuIcon from '@svg/menu';
-import CloseIcon from '@svg/cross';
-import SunIcon from '@svg/sun';
-import MoonIcon from '@svg/moon';
+import MenuIcon from '@utils/svg/Menu';
+import CloseIcon from '@utils/svg/Cross';
+import SunIcon from '@utils/svg/Sun';
+import MoonIcon from '@utils/svg/Moon';
 import Link from 'next/link';
 
 const Header: FC = () => {
