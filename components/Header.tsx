@@ -11,7 +11,6 @@ import Link from 'next/link';
 
 const Header: FC = () => {
   const router = useRouter();
-  const { pathname, asPath, query } = router;
   const { resolvedTheme, setTheme } = useTheme();
 
   const [mounted, setMounted] = useState(false);
@@ -128,7 +127,7 @@ const Header: FC = () => {
   return (
     <>
       {mounted && (
-        <header>
+        <header className="pb-16">
           <nav className="flex items-center justify-between">
             <NavBar />
           </nav>

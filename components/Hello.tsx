@@ -1,6 +1,6 @@
 const Hello = () => {
   return (
-    <main className="py-20">
+    <main className="pb-20">
       <div className="text-6xl font-bold tracking-tight">
         Hey, I'm
         <br />
