@@ -15,7 +15,7 @@ const Hello = () => {
         Please note that I'm still working on this website. You can check out
         the staging version at{' '}
         <a
-          href="https://staging.rubenbrandao.com"
+          href="https://staging.rubkn.dev"
           target="_blank"
           rel="noopener noreferrer"
           className="text-black-500 hover:text-black-100 dark:text-black-100 dark:hover:text-black-200"
