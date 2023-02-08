@@ -1,6 +1,6 @@
 import Header from '@components/Header';
 
-const Work = () => {
+const Blog = () => {
   return (
     <>
       <Header />
@@ -9,4 +9,4 @@ const Work = () => {
   );
 };
 
-export default Work;
+export default Blog;
