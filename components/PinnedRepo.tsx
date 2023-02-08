@@ -1,13 +1,10 @@
-import Fork from '@utils/svg/Fork';
 import Star from '@utils/svg/Star';
 import { GitHubPinnedItem } from '@lib/types';
 
 const PinnedRepo = ({
-  url,
   name,
   description,
   stargazerCount,
-  forkCount,
   languages
 }: GitHubPinnedItem) => {
   return (
@@ -20,12 +17,6 @@ const PinnedRepo = ({
               <div className="flex items-center justify-end space-x-1">
                 <span className="text-sm">{stargazerCount}</span>
                 <Star className="h-3 w-3" />
-              </div>
-            ) : null}
-            {forkCount >= 0 ? (
-              <div className="flex items-center justify-end space-x-1">
-                <span className="text-sm">{forkCount}</span>
-                <Fork className="h-3 w-3" />
               </div>
             ) : null}
           </div>
