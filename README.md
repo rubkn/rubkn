@@ -1,11 +1,5 @@
 #### Hello there! 👋🏻
 
---
-
-**Currently working with a private version control system at [Inlife Housing](https://inlifehousing.com/), and as a result, my coding activity will no longer be visible on GitHub.**
-
---
-
 I am a 26 y/o developer looking to build cool things and work with awesome people! 🖖🏻  
 I love building software using Javascript/Typescript and React (in the dark because I'm a vampire). 🧛  
 If you're interested in working together, feel free to reach with me via [E-mail](mailto:rubenavbrandao@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/rubenvbrandao/)! 💻  
