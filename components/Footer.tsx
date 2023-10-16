@@ -26,7 +26,7 @@ const Footer = () => {
   return (
     <footer className="w-full">
       <hr className="my-8 h-px border-0 bg-black-400" />
-      <div className="mb-2 flex items-center justify-center space-x-4 text-black-300">
+      {/* <div className="mb-2 flex items-center justify-center space-x-4 text-black-300">
         <Link href="/" className="hover:text-black-100">
           Home
         </Link>
@@ -39,7 +39,7 @@ const Footer = () => {
         <Link href="/work" className="hover:text-black-100">
           Work
         </Link>
-      </div>
+      </div> */}
       <div className="flex items-center justify-center space-x-4 text-black-300">
         <ExternalLink href="https://twitter.com/rubkndotdev">
           <TwitterIcon className="h-5 w-5" />

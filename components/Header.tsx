@@ -72,7 +72,7 @@ const Header: FC = () => {
   const NavBar: FC = () => {
     return (
       <>
-        <animated.span
+        {/* <animated.span
           style={menuIcon}
           onClick={toggleMenu}
           className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full hover:bg-black-200 dark:hover:bg-black-400"
@@ -82,7 +82,7 @@ const Header: FC = () => {
           ) : (
             <MenuIcon className="h-7 w-7" />
           )}
-        </animated.span>
+        </animated.span> */}
         <div className="flex space-x-2">
           <animated.span
             style={themeIcon}
@@ -104,7 +104,7 @@ const Header: FC = () => {
     return (
       <main className="fixed top-0 left-0 z-10 h-full w-full bg-black-100 dark:bg-black-500">
         <section className="m-auto h-full max-w-prose p-8">
-          <nav className="flex items-start justify-between">
+          <nav className="flex items-center justify-end">
             <NavBar />
           </nav>
           <animated.section style={sliderMenu} className="py-8">
