@@ -1,6 +1,6 @@
 #### Hello there! 👋🏻
 
-I am a 26 y/o developer looking to build cool things and work with awesome people! 🖖🏻  
+I am a 27 y/o developer looking to build cool things and work with awesome people! 🖖🏻  
 I love building software using Javascript/Typescript and React (in the dark because I'm a vampire). 🧛  
 If you're interested in working together, feel free to reach with me via [E-mail](mailto:rubenavbrandao@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/rubenvbrandao/)! 💻  
 Outside of programming, I like analog photography, cinema, car rides and tacos. 🌮
