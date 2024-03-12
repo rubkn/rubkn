@@ -25,7 +25,7 @@ const ExternalLink = ({
 const Footer = () => {
   return (
     <footer className="w-full">
-      <hr className="my-8 h-px border-0 bg-black-400" />
+      <hr className="mt-8 mb-4 h-px border-0 bg-black-400" />
       {/* <div className="mb-2 flex items-center justify-center space-x-4 text-black-300">
         <Link href="/" className="hover:text-black-100">
           Home
@@ -40,7 +40,7 @@ const Footer = () => {
           Work
         </Link>
       </div> */}
-      <div className="flex items-center justify-center space-x-4 text-black-300">
+      <div className="flex items-center space-x-4 text-black-300 justify-end">
         <ExternalLink href="https://twitter.com/rubkndotdev">
           <TwitterIcon className="h-5 w-5" />
         </ExternalLink>

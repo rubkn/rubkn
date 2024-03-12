@@ -24,7 +24,7 @@ const PinnedRepo = ({
         </div>
 
         <div className="flex items-center justify-between pt-1 text-black-400 dark:text-black-200">
-          <div>{description}</div>
+          <span>{description}</span>
           <div className="flex items-end space-x-2">
             {Object.entries(languages)
               .slice(0, 1)

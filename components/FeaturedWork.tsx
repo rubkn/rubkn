@@ -19,7 +19,7 @@ const FeaturedWork = () => {
         {isLoading ? (
           <h1>Loading...</h1>
         ) : (
-          data?.pinnedItems.map((item) => (
+            data?.pinnedItems?.map((item) => (
             <PinnedRepo
               key={item.name}
               url={item.url}
