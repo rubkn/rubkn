@@ -1,38 +1,37 @@
 import useSWR from 'swr';
 
 import PinnedRepo from './PinnedRepo';
-import fetcher from '@lib/fetcher';
-import { type GitHubResponse } from '@lib/types';
+import fetcher from '@/lib/fetcher';
+import { type GitHubResponse } from '@/lib/types';
 
 const FeaturedWork = () => {
-  const { data, isLoading, error } = useSWR<GitHubResponse>(
-    '/api/github',
-    fetcher
-  );
+  const { data, isLoading, error } = useSWR<GitHubResponse>('/api/github', fetcher);
+
+  if (isLoading) return <h1>Loading...</h1>;
+  if (error) return <h1>Sorry, there was an error displaying my featured projects...</h1>;
+  if (!data) return <h1>No featured projects at the moment...</h1>;
 
   return (
-    <main className="pb-16">
-      <div className="pb-4 text-3xl font-bold tracking-tight">
-        Featured Work
-      </div>
-      <div className="divide-y divide-black-200 dark:divide-black-400">
-        {isLoading ? (
-          <h1>Loading...</h1>
-        ) : (
-            data?.pinnedItems?.map((item) => (
+    <section className="mb-12">
+      <h2 className="mb-4 text-lg font-medium">some featured projects</h2>
+      <div className="grid grid-cols-2 gap-4">
+        {data?.pinnedItems?.map((item, index) => {
+          const { url, name, description, languages, stargazerCount, forkCount } = item;
+
+          return (
             <PinnedRepo
-              key={item.name}
-              url={item.url}
-              name={item.name}
-              description={item.description}
-              languages={item.languages}
-              stargazerCount={item.stargazerCount}
-              forkCount={item.forkCount}
+              key={index}
+              url={url}
+              name={name}
+              description={description}
+              languages={languages}
+              stargazerCount={stargazerCount}
+              forkCount={forkCount}
             />
-          ))
-        )}
+          );
+        })}
       </div>
-    </main>
+    </section>
   );
 };
 

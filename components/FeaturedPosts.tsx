@@ -1,12 +1,12 @@
 import useSWR from 'swr';
 
 import BlogPost from './BlogPost';
-import fetcher from '@lib/fetcher';
-import { GitHubResponse } from '@lib/types';
+import fetcher from '@/lib/fetcher';
+import { GitHubResponse } from '@/lib/types';
 
 const FeaturedPosts = () => {
   const { data, isLoading } = useSWR<GitHubResponse>('/api/github', fetcher);
-  console.log(data);
+  //console.log(data);
 
   return (
     <main className="pb-16">

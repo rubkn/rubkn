@@ -1,6 +1,6 @@
-import Fork from '@utils/svg/Fork';
-import Star from '@utils/svg/Star';
-import { type GitHubPinnedItem } from '@lib/types';
+import Fork from '@/utils/svg/Fork';
+import Star from '@/utils/svg/Star';
+import { type GitHubPinnedItem } from '@/lib/types';
 
 const BlogPost = ({
   url,

@@ -14,8 +14,8 @@ export default async function handler(req: NextRequest) {
   return new Response(JSON.stringify(data), {
     status: 200,
     headers: {
-      'content-type': 'application/json',
-      'cache-control': 'public, s-maxage=1200, stale-while-revalidate=600'
+      'Content-Type': 'application/json',
+      'Cache-Control': 'public, s-maxage=1200, stale-while-revalidate=600'
     }
   });
 }

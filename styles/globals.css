@@ -9,9 +9,25 @@
 }
 
 ::selection {
-  @apply bg-black-500 text-black-100 dark:bg-white dark:text-black-500;
+  @apply bg-neutral-500 text-white
+}
+
+html {
+  @apply antialiased min-h-screen bg-black
 }
 
 body {
-  @apply m-auto max-w-prose bg-black-100 p-8 font-sans text-black-500 dark:bg-black-500 dark:text-white;
+  @apply m-auto max-w-prose py-10 font-rubik font-normal text-neutral-300
+}
+
+p {
+  @apply text-neutral-400 leading-relaxed  
+}
+
+p strong {
+  @apply font-medium text-neutral-300 
+}
+
+p small {
+  @apply text-neutral-500
 }
