@@ -1,6 +1,6 @@
-import Fork from '@utils/svg/Fork';
-import Star from '@utils/svg/Star';
-import { type GitHubPinnedItem } from '@lib/types';
+import Fork from '@/utils/svg/Fork';
+import Star from '@/utils/svg/Star';
+import { type GitHubPinnedItem } from '@/lib/types';
 
 const BlogPost = ({
   url,
@@ -12,7 +12,7 @@ const BlogPost = ({
 }: GitHubPinnedItem) => {
   return (
     <div className="flex flex-col justify-center py-4">
-      <div className="cursor-pointer hover:scale-95 hover:duration-300">
+      <div className="cursor-pointer transition-all hover:scale-95 hover:duration-300">
         <div className="flex items-center justify-between">
           <span className="text-lg font-medium">{name}</span>
           <div className="flex space-x-4">

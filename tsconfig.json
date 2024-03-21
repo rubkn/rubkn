@@ -16,14 +16,8 @@
     "incremental": true,
     "baseUrl": "./",
     "paths": {
-      "@fixtures/*": ["__fixtures__/*"],
-      "@components/*": ["components/*"],
-      "@layouts/*": ["layouts/*"],
-      "@lib/*": ["lib/*"],
-      "@pages/*": ["pages/*"],
-      "@styles/*": ["styles/*"],
-      "@utils/*": ["utils/*"]
-    }
+      "@/*": ["./*"],
+    },
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]

@@ -1,17 +1,11 @@
 import { type ReactNode } from 'react';
 
 import Link from 'next/link';
-import GitHubIcon from '@utils/svg/GitHub';
-import TwitterIcon from '@utils/svg/Twitter';
-import LinkedInIcon from '@utils/svg/LinkedIn';
+import GitHubIcon from '@/utils/svg/GitHub';
+import TwitterIcon from '@/utils/svg/Twitter';
+import LinkedInIcon from '@/utils/svg/LinkedIn';
 
-const ExternalLink = ({
-  href,
-  children
-}: {
-  href: string;
-  children: ReactNode;
-}) => (
+const ExternalLink = ({ href, children }: { href: string; children: ReactNode }) => (
   <a
     className="hover:text-black-100"
     target="_blank"
@@ -25,7 +19,7 @@ const ExternalLink = ({
 const Footer = () => {
   return (
     <footer className="w-full">
-      <hr className="mt-8 mb-4 h-px border-0 bg-black-400" />
+      <hr className="mt-8 mb-4 h-px border-0 bg-neutral-400" />
       {/* <div className="mb-2 flex items-center justify-center space-x-4 text-black-300">
         <Link href="/" className="hover:text-black-100">
           Home

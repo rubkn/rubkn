@@ -4,7 +4,6 @@ module.exports = {
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}'
   ],
-  darkMode: 'class',
   theme: {
     extend: {
       screens: {
@@ -16,20 +15,11 @@ module.exports = {
         // => @media (min-width: 1280px) { ... }
       },
       fontFamily: {
-        sans: ['Inter', 'sans-serif']
+        sans: ['Inter', 'sans-serif'],
+        rubik: ['Rubik', 'sans-serif']
       },
       colors: {
-        black: {
-          100: '#cfcfcf',
-          200: '#9f9f9f',
-          300: '#6e6e6e',
-          400: '#3e3e3e',
-          500: '#0e0e0e',
-          600: '#0b0b0b',
-          700: '#080808',
-          800: '#060606',
-          900: '#030303'
-        }
+        black: "#080808"
       }
     }
   },

@@ -1,29 +1,15 @@
 const Hello = () => {
   return (
-    <main className="pb-20">
-      <div className="text-6xl font-bold tracking-tight">
-        Hey, I'm
-        <br />
-        Ruben Brandão
-      </div>
-      <div className="pt-4 text-base font-medium text-black-500 dark:text-black-100">
-        A web developer looking to build creative projects and collaborate with
-        inspiring people. Passionate about tech, cinema and analog photography.
-        Love car rides and exploring new places.
-      </div>
-      <div className="pt-4 text-base font-medium text-black-500 dark:text-black-100">
-        Please note that I'm still working on this website. You can check out
-        the staging version at{' '}
-        <a
-          href="https://staging.rubkn.dev"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-black-500 hover:text-black-100 dark:text-black-100 dark:hover:text-black-200"
-        >
-          staging.rubkn.dev
-        </a>
-      </div>
-    </main>
+    <p className="mb-12 text-pretty">
+      <small>a brief introduction</small>
+      <br />
+      Hello, I'm <strong>Ruben Brandão</strong>, a 27 y/o{' '}
+      <strong>full-stack developer</strong> with a <strong>focus on front-end</strong>{' '}
+      looking to build <strong>creative projects</strong> and collaborate with{' '}
+      <strong>inspiring people</strong>. Passionate about <strong>technology</strong>,{' '}
+      <strong>cinema</strong> and <strong>analog photography</strong>. Love{' '}
+      <strong>car rides</strong> and <strong>exploring new places</strong>.
+    </p>
   );
 };
 
