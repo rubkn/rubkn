@@ -1,9 +1,8 @@
-import { GitHubPinnedItem } from '@/lib/types';
-import Link from 'next/link';
+import { GitHubPinnedItem } from "@/lib/types";
+import Link from "next/link";
 
 const PinnedRepo = (repo: GitHubPinnedItem) => {
   const { url, name, description, languages } = repo;
-  console.log(repo);
 
   return (
     <article className="flex flex-col gap-2">
