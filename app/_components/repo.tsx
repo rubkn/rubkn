@@ -1,20 +1,18 @@
-import { GitHubPinnedItem } from "@/lib/types";
+"use client";
+
 import Link from "next/link";
+import { PinnedItem } from "../lib/types";
 
-const PinnedRepo = (repo: GitHubPinnedItem) => {
-  const { url, name, description, languages } = repo;
-
+export default function PinnedRepo(repo: PinnedItem) {
   return (
     <article className="flex flex-col gap-2">
       <Link
-        href={url}
+        href={repo.url}
         className="underline decoration-neutral-400 underline-offset-4 transition-colors hover:decoration-neutral-600"
       >
-        {name}
+        {repo.name}
       </Link>
-      <span className="text-balance">{description}</span>
+      <span className="text-balance">{repo.description}</span>
     </article>
   );
-};
-
-export default PinnedRepo;
+}

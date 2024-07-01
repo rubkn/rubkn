@@ -1,17 +1,27 @@
-import PinnedRepo from './repo';
-import fetcher from '@/lib/fetcher';
-import { type GitHubResponse } from '@/lib/types';
+import { PinnedItem, PinnedResponse } from "../lib/types";
+import { fetchPinnedRepos } from "../lib/api";
+import PinnedRepo from "./repo";
 
-const FeaturedWork = () => {
+export default async function Work() {
+  const user: PinnedResponse = await fetchPinnedRepos();
 
   return (
     <section className="mb-12">
-      <h2 className="mb-4 text-lg font-medium">some featured projects</h2>
+      <h2 className="mb-4 text-lg font-semibold">some of my work</h2>
       <div className="grid grid-cols-2 gap-4">
-        
+        {user.pinnedItems.map((item: PinnedItem, index) => (
+          <PinnedRepo
+            key={index}
+            url={item.url}
+            name={item.name}
+            description={item.description}
+            languages={item.languages}
+            stargazerCount={item.stargazerCount}
+            forkCount={item.forkCount}
+            homepageUrl={item.homepageUrl}
+          />
+        ))}
       </div>
     </section>
   );
-};
-
-export default FeaturedWork;
+}

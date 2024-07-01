@@ -1,52 +1,40 @@
-import { type ReactNode } from 'react';
+import Link from "next/link";
 
-import Link from 'next/link';
-import GitHubIcon from '@/utils/svg/GitHub';
-import TwitterIcon from '@/utils/svg/Twitter';
-import LinkedInIcon from '@/utils/svg/LinkedIn';
-
-const ExternalLink = ({ href, children }: { href: string; children: ReactNode }) => (
-  <a
-    className="hover:text-black-100"
-    target="_blank"
-    rel="noopener noreferrer"
-    href={href}
-  >
-    {children}
-  </a>
-);
-
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer className="w-full">
-      <hr className="mt-8 mb-4 h-px border-0 bg-neutral-400" />
-      {/* <div className="mb-2 flex items-center justify-center space-x-4 text-black-300">
-        <Link href="/" className="hover:text-black-100">
-          Home
+    <footer className="flex flex-col gap-2 sm:flex-row py-4 w-full shrink-0 items-center px-4 md:px-6 border-t">
+      <p className="text-xs text-muted-foreground">
+        &copy; 2024 Ruben Brandão. All rights reserved.
+      </p>
+      <nav className="sm:ml-auto flex gap-3 sm:gap-4">
+        <Link
+          href="https://twitter.com/rubkndotdev"
+          className="text-xs hover:underline underline-offset-4"
+          prefetch={false}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X
         </Link>
-        <Link href="/about" className="hover:text-black-100">
-          About
+        <Link
+          href="https://github.com/rubkn"
+          className="text-xs hover:underline underline-offset-4"
+          prefetch={false}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
         </Link>
-        <Link href="/blog" className="hover:text-black-100">
-          Blog
+        <Link
+          href="https://linkedin.com/in/rubenvbrandao/"
+          className="text-xs hover:underline underline-offset-4"
+          prefetch={false}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
         </Link>
-        <Link href="/work" className="hover:text-black-100">
-          Work
-        </Link>
-      </div> */}
-      <div className="flex items-center space-x-4 text-black-300 justify-end">
-        <ExternalLink href="https://twitter.com/rubkndotdev">
-          <TwitterIcon className="h-5 w-5" />
-        </ExternalLink>
-        <ExternalLink href="https://github.com/rubkn">
-          <GitHubIcon className="h-5 w-5" />
-        </ExternalLink>
-        <ExternalLink href="https://www.linkedin.com/in/rubenvbrandao/">
-          <LinkedInIcon className="h-5 w-5" />
-        </ExternalLink>
-      </div>
+      </nav>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -14,5 +14,6 @@ export type PinnedItem = {
   url: string;
   stargazerCount: number | null;
   forkCount: number | null;
+  homepageUrl: string;
   languages: Record<string, string | undefined>;
 };

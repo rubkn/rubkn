@@ -1,4 +1,6 @@
-const Hello = () => {
+"use client";
+
+export default function Header() {
   return (
     <p className="mb-12 text-pretty">
       <small>a brief introduction</small>
@@ -13,6 +15,4 @@ const Hello = () => {
       <strong>exploring new places</strong>.
     </p>
   );
-};
-
-export default Hello;
+}
