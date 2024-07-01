@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 
-import BlogPost from './BlogPost';
+import BlogPost from './blog-post';
 import fetcher from '@/lib/fetcher';
 import { GitHubResponse } from '@/lib/types';
 
@@ -10,9 +10,7 @@ const FeaturedPosts = () => {
 
   return (
     <main className="pb-16">
-      <div className="pb-4 text-3xl font-bold tracking-tight">
-        Latest Blog Posts
-      </div>
+      <div className="pb-4 text-3xl font-bold tracking-tight">Latest Blog Posts</div>
       <div className="divide-y divide-black-200 dark:divide-black-400">
         {data?.pinnedItems.map((item) => {
           return (

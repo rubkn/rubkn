@@ -19,35 +19,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-spring/web": "^9.7.3",
-    "@tailwindcss/line-clamp": "^0.4.4",
-    "@tailwindcss/typography": "^0.5.13",
-    "@types/node": "20.11.26",
-    "@types/react": "18.2.65",
-    "@types/react-dom": "18.2.21",
-    "eslint": "8.57.0",
     "next": "14.2.4",
-    "next-themes": "^0.2.1",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "swr": "^2.2.5",
-    "typescript": "5.4.2"
+    "swr": "^2.2.5"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.19",
-    "eslint-config-next": "14.2.4",
-    "postcss": "^8.4.39",
-    "prettier": "^3.3.2",
-    "prettier-plugin-tailwindcss": "^0.5.14",
-    "tailwindcss": "^3.4.4"
-  },
-  "prettier": {
-    "printWidth": 90,
-    "tabWidth": 2,
-    "useTabs": false,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "none",
-    "bracketSpacing": true
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3"
   }
 }

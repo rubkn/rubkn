@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  @apply m-0 box-border p-0;
+}
+
+::selection {
+  @apply bg-neutral-500 text-white;
+}
+
+html {
+  @apply antialiased min-h-screen bg-black;
+}
+
+body {
+  @apply m-auto max-w-prose py-10 font-normal text-neutral-300;
+}
+
+p {
+  @apply text-neutral-400 leading-relaxed;
+}
+
+p strong {
+  @apply font-medium text-neutral-300;
+}
+
+p small {
+  @apply text-neutral-500;
+}

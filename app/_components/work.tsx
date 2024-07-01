@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 
-import PinnedRepo from './PinnedRepo';
+import PinnedRepo from './repo';
 import fetcher from '@/lib/fetcher';
 import { type GitHubResponse } from '@/lib/types';
 
