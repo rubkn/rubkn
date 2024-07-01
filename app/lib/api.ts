@@ -1,17 +1,13 @@
-import { type NextRequest } from 'next/server';
+import { PinnedItem } from "./types";
 
-export default async function handler(req: NextRequest) {
-  const response = await fetch(`https://pinned.rubkn.dev/api/user/rubkn`, {
-    method: 'GET'
-  });
+export async function fetchPinnedRepos(): Promise<PinnedItem[]> {
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/rubkn`);
 
-  const data = await response.json();
+  if (!response.ok) {
+    throw new Error("Failed to fetch pinned repositories");
+  }
 
-  return new Response(JSON.stringify(data), {
-    status: 200,
-    headers: {
-      'Content-Type': 'application/json',
-      'Cache-Control': 'public, s-maxage=1200, stale-while-revalidate=600'
-    }
-  });
+  const repos: PinnedItem[] = await response.json();
+
+  return repos;
 }
