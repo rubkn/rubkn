@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { PinnedItem } from "../lib/types";
+import { PinnedItem } from "@/lib/types";
 
 export default function PinnedRepo(repo: PinnedItem) {
   return (

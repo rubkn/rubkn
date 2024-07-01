@@ -1,5 +1,5 @@
-import { PinnedItem, PinnedResponse } from "../lib/types";
-import { fetchPinnedRepos } from "../lib/api";
+import { PinnedItem, PinnedResponse } from "@/lib/types";
+import { fetchPinnedRepos } from "@/lib/api";
 import PinnedRepo from "./repo";
 
 export default async function Work() {
