@@ -5,7 +5,7 @@ export default function Header() {
     <p className="mb-12 text-pretty">
       <small>a brief introduction</small>
       <br />
-      Hello, I&apos;m <strong>Ruben Brandão</strong>, a 27 y/o{" "}
+      Hello, I&apos;m <strong>Ruben Brandão</strong>, a 28 y/o{" "}
       <strong>full-stack developer</strong> with a{" "}
       <strong>focus on front-end</strong> looking to build{" "}
       <strong>creative projects</strong> and collaborate with{" "}
