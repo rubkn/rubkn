@@ -5,7 +5,7 @@ import FeaturedWork from "@/components/work";
 export default function LandingPage() {
   return (
     <div className="flex flex-col min-h-screen w-full justify-between">
-      <main className="max-w-prose mx-auto p-6 w-full text-base leading-relaxed shadow-2xl">
+      <main className="max-w-2xl mx-auto p-6 w-full">
         <p className="mb-12 text-pretty">
           hello, I&apos;m <strong>Ruben Brandão</strong>, a 28 y/o{" "}
           <strong>full-stack developer</strong> with a{" "}
