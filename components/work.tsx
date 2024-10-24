@@ -47,7 +47,7 @@ export default async function Work() {
       </div>
 
       <div className="text-center">
-        <Link href="/projects" passHref>
+        <Link href="https://github.com/rubkn" passHref>
           <Button variant="link">
             View all projects <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
